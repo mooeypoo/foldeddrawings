@@ -102,31 +102,62 @@ Replace placeholder images in `featured-pdfs.json` with actual product images. Y
 
 ## 📧 Contact Form Setup
 
-The contact form currently uses Formspree. To enable it:
+The contact form uses **Netlify Forms**, which is automatically configured when deployed to Netlify. The form includes:
 
-1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form
-3. Replace `your-form-id` in `src/pages/contact.astro` with your Formspree form ID
+- **Automatic email delivery** to `info@FoldedDrawings.com` (configured in Netlify dashboard)
+- **Spam protection** via honeypot field
+- **Success/error messaging** with user feedback
 
-Alternatively, you can use:
-- **EmailJS**: For client-side email sending
-- **Netlify Forms**: If deploying to Netlify
-- **Vercel**: Serverless functions for form handling
+### Netlify Forms Configuration
 
-## 🚢 Deployment
+1. **Form Detection**: Netlify automatically detects forms during build (see `public/netlify-forms.html`)
+2. **Email Notifications**: 
+   - Go to your Netlify site dashboard
+   - Navigate to Forms → Form notifications
+   - Add email notification to `info@FoldedDrawings.com`
+3. **Form Submissions**: View all submissions in Netlify dashboard under Forms
 
-This is a static site that can be deployed to:
+No additional setup needed - it works automatically when deployed to Netlify!
 
-- **Netlify**: Connect your Git repo and deploy automatically
-- **Vercel**: Similar to Netlify, great DX
-- **GitHub Pages**: Free hosting for static sites
-- **Cloudflare Pages**: Fast and reliable
+## 🚢 Deployment to Netlify
 
-Deploy commands:
+This site is configured for **Netlify** deployment with automatic form handling.
+
+### Quick Deploy (Recommended)
+
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
+
+2. **Connect to Netlify**:
+   - Go to [app.netlify.com](https://app.netlify.com)
+   - Click "Add new site" → "Import an existing project"
+   - Connect your GitHub repository
+   - Netlify will auto-detect settings from `netlify.toml`
+
+3. **Configure Email Notifications**:
+   - In Netlify dashboard, go to **Forms**
+   - Find your "contact" form
+   - Click **Notifications & webhooks**
+   - Add email notification to `info@FoldedDrawings.com`
+
+That's it! Your site will automatically deploy on every push to `main`.
+
+### Manual Deploy
+
 ```bash
 npm run build
-# Upload the `dist/` folder to your hosting provider
+# Then drag the `dist/` folder to Netlify drop zone
 ```
+
+### Other Hosting Options
+
+- **Vercel**: Similar setup, uses serverless functions for forms
+- **GitHub Pages**: Manual form setup required (use Formspree or EmailJS)
+- **Cloudflare Pages**: Similar to Netlify
 
 ## 🛠️ Tech Stack
 
