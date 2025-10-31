@@ -1,0 +1,40 @@
+[
+  {
+    "id": "1",
+    "title": "Spring Garden Collection",
+    "description": "Beautiful floral patterns that transform when folded. Perfect for springtime coloring!",
+    "image": "https://via.placeholder.com/400x400?text=Spring+Garden",
+    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
+    "price": "$4.99",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Ocean Adventures",
+    "description": "Dive into underwater scenes that reveal hidden treasures when folded.",
+    "image": "https://via.placeholder.com/400x400?text=Ocean+Adventures",
+    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
+    "price": "$4.99",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "title": "Holiday Magic Bundle",
+    "description": "Festive designs for the holiday season. Limited time special!",
+    "image": "https://via.placeholder.com/400x400?text=Holiday+Magic",
+    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
+    "price": "$9.99",
+    "featured": true,
+    "onSale": true,
+    "originalPrice": "$14.99"
+  },
+  {
+    "id": "4",
+    "title": "Butterfly Dreams",
+    "description": "Magical butterflies that transform into beautiful landscapes.",
+    "image": "https://via.placeholder.com/400x400?text=Butterfly+Dreams",
+    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
+    "price": "$4.99",
+    "featured": true
+  }
+]

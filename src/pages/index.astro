@@ -1,16 +1,99 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FeaturedPdfCard from '../components/FeaturedPdfCard.astro';
+import TutorialCard from '../components/TutorialCard.astro';
+import siteConfig from '../data/site-config.json';
+import featuredPdfs from '../data/featured-pdfs.json';
+import tutorials from '../data/tutorials.json';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={siteConfig.siteTitle} description={siteConfig.siteDescription}>
+	<!-- Hero Section -->
+	<section class="py-16 px-4">
+		<div class="container mx-auto text-center max-w-4xl px-4">
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+				{siteConfig.shopName}
+			</h1>
+			<p class="text-xl sm:text-2xl md:text-3xl text-gray-700 mb-4 font-semibold">
+				{siteConfig.tagline}
+			</p>
+			<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+				Discover unique printable PDF coloring pages that transform into magical scenes when folded. 
+				Perfect for all ages and skill levels!
+			</p>
+			<a 
+				href={siteConfig.etsyShopUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+			>
+				Shop Now on Etsy →
+			</a>
+		</div>
+	</section>
+
+	<!-- Featured PDFs Section -->
+	<section class="py-16 px-4 bg-white/50">
+		<div class="container mx-auto">
+			<h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
+				Featured Designs
+			</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				{featuredPdfs
+					.filter(pdf => pdf.featured)
+					.map((pdf) => (
+						<FeaturedPdfCard
+							title={pdf.title}
+							description={pdf.description}
+							image={pdf.image}
+							etsyUrl={pdf.etsyUrl}
+							price={pdf.price}
+							onSale={pdf.onSale}
+							originalPrice={pdf.originalPrice}
+						/>
+					))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Tutorials Section -->
+	<section class="py-16 px-4">
+		<div class="container mx-auto">
+			<h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
+				Video Tutorials
+			</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+				Learn how to print, fold, and color your FoldedDrawings with our step-by-step video guides.
+			</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				{tutorials.map((tutorial) => (
+					<TutorialCard
+						title={tutorial.title}
+						description={tutorial.description}
+						youtubeId={tutorial.youtubeId}
+					/>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+		<div class="container mx-auto text-center max-w-3xl">
+			<h2 class="text-4xl font-bold mb-4">
+				Ready to Start Folding?
+			</h2>
+			<p class="text-xl mb-8 text-purple-100">
+				Browse our collection of transformative coloring pages and start creating magic today!
+			</p>
+			<a 
+				href={siteConfig.etsyShopUrl}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-block bg-white text-purple-600 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+			>
+				Visit Our Etsy Shop →
+			</a>
+		</div>
+	</section>
+</BaseLayout>

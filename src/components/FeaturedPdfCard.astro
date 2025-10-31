@@ -1,0 +1,52 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+	etsyUrl: string;
+	price: string;
+	onSale?: boolean;
+	originalPrice?: string;
+}
+
+const { title, description, image, etsyUrl, price, onSale, originalPrice } = Astro.props;
+---
+
+<a 
+	href={etsyUrl} 
+	target="_blank" 
+	rel="noopener noreferrer"
+	class="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+>
+	<div class="relative">
+		<img 
+			src={image} 
+			alt={title}
+			class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+		/>
+		{onSale && (
+			<span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+				Sale!
+			</span>
+		)}
+	</div>
+	<div class="p-6">
+		<h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+			{title}
+		</h3>
+		<p class="text-gray-600 mb-4 line-clamp-2">
+			{description}
+		</p>
+		<div class="flex items-center justify-between">
+			<div class="flex items-center gap-2">
+				{onSale && originalPrice && (
+					<span class="text-gray-400 line-through text-sm">{originalPrice}</span>
+				)}
+				<span class="text-2xl font-bold text-purple-600">{price}</span>
+			</div>
+			<span class="text-purple-600 font-semibold group-hover:translate-x-1 transition-transform inline-block">
+				View →
+			</span>
+		</div>
+	</div>
+</a>

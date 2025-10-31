@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	youtubeId: string;
+}
+
+const { title, description, youtubeId } = Astro.props;
+const embedUrl = `https://www.youtube.com/embed/${youtubeId}`;
+---
+
+<div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+	<div class="aspect-video">
+		<iframe
+			src={embedUrl}
+			title={title}
+			class="w-full h-full"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+			loading="lazy"
+		></iframe>
+	</div>
+	<div class="p-6">
+		<h3 class="text-xl font-bold text-gray-800 mb-2">
+			{title}
+		</h3>
+		<p class="text-gray-600">
+			{description}
+		</p>
+	</div>
+</div>

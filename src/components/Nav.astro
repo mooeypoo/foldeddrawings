@@ -1,0 +1,29 @@
+---
+import siteConfig from '../data/site-config.json';
+---
+
+<nav class="bg-white shadow-md sticky top-0 z-50">
+	<div class="container mx-auto px-4 py-4">
+		<div class="flex items-center justify-between flex-wrap gap-4">
+			<a href="/" class="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent hover:from-purple-700 hover:to-pink-700 transition-all">
+				{siteConfig.shopName}
+			</a>
+			<div class="flex gap-4 md:gap-6 items-center">
+				<a href="/" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">
+					Home
+				</a>
+				<a href="/contact" class="text-gray-700 hover:text-purple-600 font-medium transition-colors">
+					Contact
+				</a>
+				<a 
+					href={siteConfig.etsyShopUrl} 
+					target="_blank" 
+					rel="noopener noreferrer"
+					class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 md:px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-md hover:shadow-lg text-sm md:text-base"
+				>
+					Shop on Etsy
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>

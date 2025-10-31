@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import siteConfig from '../data/site-config.json';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = siteConfig.siteTitle, description = siteConfig.siteDescription } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
+		<Nav />
+		<main>
+			<slot />
+		</main>
+		<footer class="bg-purple-900 text-white py-8 mt-16">
+			<div class="container mx-auto px-4 text-center">
+				<p class="text-lg font-semibold mb-2">{siteConfig.shopName}</p>
+				<p class="text-purple-200 mb-4">{siteConfig.tagline}</p>
+				<div class="flex justify-center gap-4 mb-4">
+					<a 
+						href={siteConfig.etsyShopUrl} 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="text-purple-200 hover:text-white transition-colors underline"
+					>
+						Visit Etsy Shop
+					</a>
+					<span class="text-purple-400">•</span>
+					<a 
+						href="/contact" 
+						class="text-purple-200 hover:text-white transition-colors underline"
+					>
+						Contact
+					</a>
+				</div>
+				<p class="text-purple-300 text-sm">© {new Date().getFullYear()} {siteConfig.shopName}. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
