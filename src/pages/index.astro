@@ -5,6 +5,8 @@ import TutorialCard from '../components/TutorialCard.astro';
 import siteConfig from '../data/site-config.json';
 import featuredPdfs from '../data/featured-pdfs.json';
 import tutorials from '../data/tutorials.json';
+
+const isSingleTutorial = tutorials.length === 1;
 ---
 
 <BaseLayout title={siteConfig.siteTitle} description={siteConfig.siteDescription}>
@@ -73,15 +75,25 @@ import tutorials from '../data/tutorials.json';
 			<p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
 				Learn how to print, fold, and color your FoldedDrawings with our step-by-step video guides.
 			</p>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-				{tutorials.map((tutorial) => (
+			{isSingleTutorial ? (
+				<div class="max-w-4xl mx-auto">
 					<TutorialCard
-						title={tutorial.title}
-						description={tutorial.description}
-						youtubeId={tutorial.youtubeId}
+						title={tutorials[0].title}
+						description={tutorials[0].description}
+						youtubeId={tutorials[0].youtubeId}
 					/>
-				))}
-			</div>
+				</div>
+			) : (
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+					{tutorials.map((tutorial) => (
+						<TutorialCard
+							title={tutorial.title}
+							description={tutorial.description}
+							youtubeId={tutorial.youtubeId}
+						/>
+					))}
+				</div>
+			)}
 		</div>
 	</section>
 
