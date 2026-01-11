@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteConfig from '../data/site-config.json';
+---
+
+<BaseLayout
+	title={`Usage & Permissions - ${siteConfig.shopName}`}
+	description="Friendly guidelines for personal and classroom use of FoldedDrawings artwork."
+>
+	<section class="py-16 px-4">
+		<div class="container mx-auto max-w-3xl bg-white rounded-xl shadow-lg p-8 md:p-12 space-y-6">
+			<h1 class="text-4xl md:text-5xl font-bold text-center mb-2 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+				Usage &amp; Permissions
+			</h1>
+			<p class="text-center text-gray-600 mb-6">
+				A clear, friendly guide to how you can use Folded Drawings.
+			</p>
+
+			<p class="text-gray-700">
+				Folded Drawings illustrations are meant to be easy to use while still respecting the work that goes into creating original art. Here’s what you’re welcome to do—and where I ask for your support.
+			</p>
+
+			<div class="space-y-4">
+				<h2 class="text-2xl font-semibold text-gray-900">Personal Use</h2>
+				<p class="text-gray-700">All drawings include personal-use permission.</p>
+				<p class="text-gray-700 font-semibold">You may:</p>
+				<ul class="list-disc list-inside space-y-1 text-gray-700">
+					<li>print the artwork for yourself or your family</li>
+					<li>use it as part of personal projects or gifts</li>
+					<li>print as many copies as you need for your own use</li>
+				</ul>
+				<p class="text-gray-700 font-semibold">Please don’t:</p>
+				<ul class="list-disc list-inside space-y-1 text-gray-700">
+					<li>share or redistribute the digital files</li>
+					<li>upload the artwork to shared drives or public websites</li>
+					<li>resell the artwork or use it in commercial products</li>
+					<li>include the illustrations in AI training datasets</li>
+				</ul>
+			</div>
+
+			<div class="space-y-4">
+				<h2 class="text-2xl font-semibold text-gray-900">Classroom Use (Teacher Exception)</h2>
+				<p class="text-gray-700">
+					Teachers are a big part of why Folded Drawings exists, so every purchase includes a special classroom-use allowance.
+				</p>
+				<p class="text-gray-700 font-semibold">Educators may:</p>
+				<ul class="list-disc list-inside space-y-1 text-gray-700">
+					<li>print copies for <span class="font-semibold">their own classroom</span></li>
+					<li>use the artwork in lessons, activities, or free-draw time</li>
+					<li>reuse the same drawing with new classes in future years</li>
+				</ul>
+				<p class="text-gray-700 font-semibold">To keep things sustainable, I ask that teachers please <span class="font-semibold">don’t</span>:</p>
+				<ul class="list-disc list-inside space-y-1 text-gray-700">
+					<li>share digital files with other teachers or schools</li>
+					<li>upload files to shared school drives or internal repositories</li>
+					<li>distribute artwork school-wide or district-wide</li>
+				</ul>
+				<p class="text-gray-700">
+					If colleagues are excited about the drawings, sending them to <a href="https://FoldedDrawings.com" class="text-purple-600 hover:text-purple-700 font-semibold underline">FoldedDrawings.com</a> or to the Etsy shop helps me keep making new resources.
+				</p>
+			</div>
+
+			<div class="space-y-3">
+				<h2 class="text-2xl font-semibold text-gray-900">Why These Permissions Exist</h2>
+				<p class="text-gray-700">
+					These guidelines protect my ability to keep prices accessible for families and educators. Most people try to do the right thing, and this clarity helps everyone feel confident about how they’re using the artwork.
+				</p>
+				<p class="text-gray-700">
+					Thank you for respecting these boundaries and supporting independent art.
+				</p>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+

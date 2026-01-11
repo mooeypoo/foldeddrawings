@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteConfig from '../data/site-config.json';
+---
+
+<BaseLayout
+	title={`Printing Tips - ${siteConfig.shopName}`}
+	description="Best practices to print FoldedDrawings cleanly at home or in class."
+>
+	<section class="py-16 px-4">
+		<div class="container mx-auto max-w-3xl bg-white rounded-xl shadow-lg p-8 md:p-12">
+			<h1 class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+				Printing Tips
+			</h1>
+			<p class="text-center text-gray-600 mb-10">
+				Because your drawings should come out just as clean and crisp as they look on screen.
+			</p>
+
+			<p class="text-gray-700 mb-6">
+				Folded Drawings are designed to print beautifully on standard home and classroom printers. A few small settings make a big difference:
+			</p>
+
+			<h2 class="text-2xl font-semibold text-gray-900 mb-3">For best results:</h2>
+			<ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+				<li>Print at <span class="font-semibold">100% scale</span> (turn off “fit to page”)</li>
+				<li>Use plain paper or slightly thicker stock (120–160gsm / 32–43lb)</li>
+				<li>Black-and-white or grayscale mode works perfectly</li>
+				<li>If lines look faint, turn off “photo smoothing,” “eco mode,” or extra ink-saving features</li>
+			</ul>
+
+			<p class="text-gray-700 mb-8">
+				These drawings are purposely simple so they stay crisp, high-contrast, and easy to color. If you ever run into printing issues, you can always reach out through Etsy messages or the contact form here.
+			</p>
+
+			<p class="text-gray-800 font-semibold text-center">
+				Happy printing!
+			</p>
+		</div>
+	</section>
+</BaseLayout>
+
