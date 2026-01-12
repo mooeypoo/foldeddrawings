@@ -1,40 +1,38 @@
 [
   {
     "id": "1",
-    "title": "Spring Garden Collection",
-    "description": "Beautiful floral patterns that transform when folded. Perfect for springtime coloring!",
-    "image": "https://placehold.co/400x400",
-    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
-    "price": "$4.99",
+    "title": "Giraffe: Head to the Skies",
+    "description": "A giraffe whose head reaches to the skies!",
+    "image": "https://i.etsystatic.com/61944160/r/il/408306/7640098987/il_1140xN.7640098987_4807.jpg",
+    "etsyUrl": "https://www.etsy.com/listing/4439607927/folded-giraffe-coloring-page-printable",
+    "price": "$1.99",
     "featured": true
   },
   {
     "id": "2",
-    "title": "Ocean Adventures",
-    "description": "Dive into underwater scenes that reveal hidden treasures when folded.",
-    "image": "https://placehold.co/400x400",
-    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
-    "price": "$4.99",
+    "title": "Space Rocket: Launch!",
+    "description": "Launching into space with this space rocket!",
+    "image": "https://i.etsystatic.com/61944160/r/il/baa782/7592211064/il_1140xN.7592211064_8g9y.jpg",
+    "etsyUrl": "https://www.etsy.com/listing/4439625274/folded-space-rocket-coloring-page",
+    "price": "$1.99",
     "featured": true
   },
   {
     "id": "3",
-    "title": "Holiday Magic Bundle",
-    "description": "Festive designs for the holiday season. Limited time special!",
-    "image": "https://placehold.co/400x400",
-    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
-    "price": "$9.99",
-    "featured": true,
-    "onSale": true,
-    "originalPrice": "$14.99"
+    "title": "The Singing Beetle",
+    "description": "Join the singing beetle as he performs his song for the world to hear!",
+    "image": "https://i.etsystatic.com/61944160/r/il/ebb1fc/7592204354/il_1140xN.7592204354_ksrq.jpg",
+    "etsyUrl": "https://www.etsy.com/listing/4439616185/folded-singing-beetle-coloring-page",
+    "price": "$1.99",
+    "featured": true
   },
   {
     "id": "4",
-    "title": "Butterfly Dreams",
-    "description": "Magical butterflies that transform into beautiful landscapes.",
-    "image": "https://placehold.co/400x400",
-    "etsyUrl": "https://www.etsy.com/shop/FoldedDrawings",
-    "price": "$4.99",
+    "title": "The Hungry Whale",
+    "description": "Underwater adventures with the hungry whale!",
+    "image": "https://i.etsystatic.com/61944160/r/il/206d19/7640143103/il_1140xN.7640143103_23xz.jpg",
+    "etsyUrl": "https://www.etsy.com/listing/4439614143/folded-whale-coloring-page-printable",
+    "price": "$1.99",
     "featured": true
   }
 ]
